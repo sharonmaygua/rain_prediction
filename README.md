@@ -18,7 +18,7 @@ El paso inicial es preparar los datos para el entrenamiento del modelo, con las 
 
 ### 1). Configuración del Entorno
 
-Una continuación, se describe los pasos para configurar el entorno :
+A continuación, se describe los pasos para configurar el entorno :
 
 - Se busca un recurso de computación (que preferente debe ser creado con anterioridad). En nuestro caso tiene el nombre de `cpu-cluster-prediction` Si no existe, se crea un nuevo recurso con las especificaciones:
   - Tipo: amlcompute
