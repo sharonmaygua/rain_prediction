@@ -1,4 +1,4 @@
-[# Proyecto de Clasificación de Predicción de Luvia en Australia utilizando Azure Machine Learning
+# Proyecto de Clasificación de Predicción de Luvia en Australia utilizando Azure Machine Learning
 Este espacio proporciona una explicación de todo el trabajo que se ha realizado en el proyecto de clasificación para predecir la vida en Australia utilizando el AzureML. 
 
 A continuación, se detallan los pasos seguidos, las herramientas utilizadas y los fragmentos de código más importantes.
@@ -60,4 +60,3 @@ Se muestra cómo probar el modelo implementado en el punto de conexión en líne
 ### 8). Descarga de Artefactos del Modelo
 El proyecto también permite descargar los artefactos del modelo implementado en una carpeta local llamada artifact_downloads. Estos artefactos incluyen el modelo entrenado y otros archivos necesarios para su funcionamiento.
 
-](https://github.com/sharonmaygua/rain_prediction/blob/main/README.md)https://github.com/sharonmaygua/rain_prediction/blob/main/README.md
