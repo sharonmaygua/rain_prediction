@@ -1,10 +1,10 @@
-# Proyecto de Clasificación de Predicción de Luvia en Australia utilizando Azure Machine Learning
-Este espacio proporciona una explicación de todo el trabajo que se ha realizado en el proyecto de clasificación para predecir la lluvia en Australia utilizando el AzureML. 
+# Proyecto de Clasificación de Predicción de LLuvia en Australia utilizando Azure Machine Learning
+Este espacio proporciona una explicación de todo el trabajo que se ha realizado para nuestro  proyecto de clasificación para predecir la lluvia en Australia utilizando  AzureML. 
 
 A continuación, se detallan los pasos seguidos, las herramientas utilizadas y los fragmentos de código más importantes.
 
 ## Objetivo del Proyecto
-El objetivo del proyecto es predecir si lloverá mañana en diferentes regiones de Australia utilizando distintos modelos de aprendizaje automático (Aprendizaje de máquinas) y eligiendo aquel que tiene mejor rendimiento.
+El objetivo del proyecto es predecir si lloverá mañana en diferentes regiones de Australia utilizando distintos modelos de aprendizaje automático y eligiendo aquel que tiene mejor rendimiento.
 ## Herramientas Utilizadas
 - Azure ML: Utilizado para el entrenamiento, despliegue y gestión de modelos de aprendizaje automático en la nube.
 - MLFlow: Utilizado para el seguimiento y la gestión de los resultados y artefactos generales durante el proceso de entrada.
@@ -46,7 +46,7 @@ El código proporcionado ejecuta el trabajo de clasificación de AutoML y se env
 Se entrenan varios modelos, incluido un StackEnsemble, un VotingEnsemble y otros modelos. El mejor modelo, según la métrica de precisión, es el modelo StackEnsemble con una precisión de, por ejemplo, 85.54%. Luego, se propone la URL para acceder a la información del trabajo, incluido el estado actual y los resultados del modelo.
 
 ### 5). Acceso a los Resultados a través de MLFlow
-El proyecto utiliza MLFlow para acceder a los resultados del trabajo de clasificación. Se inicializa un cliente de MLFlow y se obtiene la URL de seguimiento para MLFlow. Esta URL se utiliza para conectar al servidor de MLFlow y acceder a los resultados del trabajo, como el mejor modelo y sus métricas.
+Se utiliza MLFlow para acceder a los resultados del trabajo de clasificación. Se inicializa un cliente de MLFlow y se obtiene la URL de seguimiento para MLFlow. Esta URL se utiliza para conectar al servidor de MLFlow y acceder a los resultados del trabajo, como el mejor modelo y sus métricas.
 
 
 ### 6). Implementación del Mejor Modelo en un Recurso de Punto de Conexión en Línea 
