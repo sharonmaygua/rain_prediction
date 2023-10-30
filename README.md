@@ -1,5 +1,8 @@
 [# Proyecto de Clasificación de Predicción de Luvia en Australia utilizando Azure Machine Learning
-Este espacio proporciona una explicación de todo el trabajo que se ha realizado en el proyecto de clasificación para predecir la vida en Australia utilizando el AzureML. A continuación, se detallan los pasos seguidos, las herramientas utilizadas y los fragmentos de código más importantes.
+Este espacio proporciona una explicación de todo el trabajo que se ha realizado en el proyecto de clasificación para predecir la vida en Australia utilizando el AzureML. 
+
+A continuación, se detallan los pasos seguidos, las herramientas utilizadas y los fragmentos de código más importantes.
+
 ## Objetivo del Proyecto
 El objetivo del proyecto es predecir si lloverá mañana en diferentes regiones de Australia utilizando distintos modelos de aprendizaje automático (Aprendizaje de máquinas) y eligiendo aquel que tiene mejor rendimiento.
 ## Herramientas Utilizadas
@@ -27,15 +30,15 @@ Una continuación, se describe los pasos para configurar el entorno :
 
 ### 2). Entrenamiento del Modelo con AutoML
 
-El siglo paso es la configuración del trabajo de clasificación de AutoML. El código crea un trabajo con el nombre de predicción de lluvia y un tiempo de espera de 30 minutos. El trabajo utilizará el recurso de poder-cluster-prediction y los datos de entretenimiento y validación proporcional. La columna de destino es RainTomorrow y la métrica principal es precision_score_weighted. Además, se habilita la explicabilidad del modelo. Se establecen los siglos límitos para el trabajo :
+El siguiente paso es la configuración del trabajo de clasificación de AutoML. El código crea un trabajo con el nombre rain-prediction y un tiempo de espera de 30 minutos. El trabajo utilizará el recurso de cómputo cpu-cluster-prediction y los datos de entrenamiento y validación proporcionados. La columna de destino es RainTomorrow y la métrica principal es precision_score_weighted. Además, se habilita la explicabilidad del modelo. Se establecen los siguientes límites para el trabajo:
  
 - Tiempo de espera: 30 minutos
 - Número máximo de ensayos: 5
 - Número máximo de nodos: 4
-Este trabajo de clasificación de AutoML entrenará un modelo para predecir si habrá lluvia en Australia al día siguiente. El trabajo se completará después de 30 minutos o si se han completado 5 ensayos, lo que es primero.
+Este trabajo de clasificación de AutoML entrenará un modelo para predecir si habrá lluvia en Australia al día siguiente. El trabajo se completará después de 30 minutos o si se han completado 5 ensayos, lo que ocurre primero.
 
 ### 3). Ejecución y Seguimiento del Trabajo de Clasificación
-El código corporativo ejecutó el trabajo de clasificación de AutoML y se encontró al backend de Azure Machine Learning Studio. El backend ejecutará el trabajo y entrenará varios modelos. El código también debe imponer el identificador del trabajo creado, que se utiliza para realizar un seguimiento del estado del trabajo y obtener los resultados del entrenamiento.
+El código proporcionado ejecuta el trabajo de clasificación de AutoML y se envía al backend de Azure Machine Learning Studio. El backend ejecutará el trabajo y entrenará varios modelos. El código también imprime el identificador del trabajo creado, que se utiliza para realizar un seguimiento del estado del trabajo y obtener los resultados del entrenamiento.
 
 
 ### 4). Resultados del Entrenamiento
@@ -47,7 +50,7 @@ El proyecto utiliza MLFlow para acceder a los resultados del trabajo de clasific
 
 
 ### 6). Implementación del Mejor Modelo en un Recurso de Punto de Conexión en Línea 
-Posteriormente, se registra el mejor modelo y lo implementa en un recurso de conexión en línea. El registro del modelo se realiza utilizando el código propuesto y luego se procesa a la implementación.
+Posteriormente, se registra el mejor modelo y lo implementa en un recurso de conexión en línea. El registro del modelo se realiza utilizando el código proporcionado y luego se procesa a la implementación.
 
 
 
@@ -55,4 +58,6 @@ Posteriormente, se registra el mejor modelo y lo implementa en un recurso de con
 Se muestra cómo probar el modelo implementado en el punto de conexión en línea. Se crea un objeto de solicitud JSON con datos de prueba, se guarda en un archivo y se invoca el punto de conexión en línea. Los resultados de la prueba se imprimen en la consola.
 
 ### 8). Descarga de Artefactos del Modelo
-El proyecto también permite descargar los artefactos del modelo implementado en una alfombra local llama artefact_downloads. Estos artefactos incluyen el modelo entrenado y otros archivos necesarios para su función.](https://github.com/sharonmaygua/rain_prediction/blob/main/README.md)https://github.com/sharonmaygua/rain_prediction/blob/main/README.md
+El proyecto también permite descargar los artefactos del modelo implementado en una carpeta local llamada artifact_downloads. Estos artefactos incluyen el modelo entrenado y otros archivos necesarios para su funcionamiento.
+
+](https://github.com/sharonmaygua/rain_prediction/blob/main/README.md)https://github.com/sharonmaygua/rain_prediction/blob/main/README.md
